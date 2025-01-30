@@ -10,11 +10,11 @@ import JSIcon from "@/src/app/components/icons/JSIcon";
 import MUIIcon from "@/src/app/components/icons/MUIIcon";
 import NextjsIcon from "@/src/app/components/icons/NextjsIcon";
 import ReactIcon from "@/src/app/components/icons/ReactIcon";
-import { LogosReactQueryIcon } from "@/src/app/components/icons/ReactQueryIcon";
 import ReduxIcon from "@/src/app/components/icons/ReduxIcon";
 import TailwindIcon from "@/src/app/components/icons/TailwindIcon";
 import TSIcon from "@/src/app/components/icons/TSIcon";
 import { TProjectData } from "@/src/types/projects";
+import { ReactQueryIcon } from "@/src/app/components/icons/ReactQueryIcon";
 
 
 
@@ -276,7 +276,7 @@ export const projectsData: TProjectData = {
 
         {
           title: "React Query",
-          icon: <LogosReactQueryIcon key={1} />,
+          icon: <ReactQueryIcon size={18} key={1} />,
         },
 
         {

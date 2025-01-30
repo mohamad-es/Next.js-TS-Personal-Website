@@ -8,40 +8,29 @@ import Link from "next/link";
 import ProjectsCards from "../projects/_components/ProjectsCards";
 
 const WorkHighlight = () => {
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-  const modalsRef: any = useRef(
-    projectsData.projectsInfo.map(() => createRef())
-  );
+  const modalsRef: any = useRef(projectsData.projectsInfo.map(() => createRef()));
   const handleModal = (index: any) => {
     modalsRef.current[index].current.showModal();
   };
 
+  const filterProject = projectsData.projectsInfo.slice(0, 3);
+
   return (
-    <section
-      className="overflow-hidden xl:overflow-visible"
-      id="work-highlight"
-    >
-      <div className="flex flex-col xl:flex-row xl:items-end gap-2 mb-16 lg:mb-28">
+    <section className="overflow-hidden xl:overflow-visible" id="work-highlight">
+      <div className="flex flex-col xl:flex-row xl:items-end gap-2 mb-16 lg:mb-16">
         <h2>{homeData.workHighlights.title}</h2>
-        <h3 className="text-gradient text-base font-medium">
-          {homeData.workHighlights.subTitle}
-        </h3>
+        <h3 className="text-gradient text-base font-medium">{homeData.workHighlights.subTitle}</h3>
       </div>
 
       <div className="flex flex-col justify-between gap-10">
         <div className="flex-1 order-2 lg:order-1 mt-10 text-center">
           <p>{homeData.workHighlights.description}</p>
           <Link href={homeData.workHighlights.callToAction.link}>
-            <strong className="btn btn-primary mt-4">
-              {homeData.workHighlights.callToAction.title}
-            </strong>
+            <strong className="btn btn-primary mt-4">{homeData.workHighlights.callToAction.title}</strong>
           </Link>
         </div>
 
-        <ProjectsCards
-          handleModal={handleModal}
-          selectedFilters={selectedFilters}
-        />
+        <ProjectsCards projectData={filterProject} handleModal={handleModal} />
       </div>
 
       {projectsData.projectsInfo.map((item, index) => (

@@ -1,8 +1,7 @@
 "use client";
 
 import { projectsData } from "@/public/data/projects";
-import { useRef, createRef, useState } from "react";
-import ProjectsCards from "../projects/_components/ProjectsCards";
+import { useRef, createRef } from "react";
 import { homeData } from "@/public/data/home";
 
 const useModal = () => {
@@ -16,14 +15,11 @@ const useModal = () => {
 };
 
 const Skills = () => {
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-  const { handleModal } = useModal();
-
   return (
-    <div className="px-3 mt-12">
+    <div className="px-3 mt-16">
       <div className="flex flex-wrap justify-center gap-5">
         {homeData.skills.map((item) => (
-          <div className="col-span-1" key={item.id}>{item.icon}</div>
+          <div key={item.id}>{item.icon}</div>
         ))}
       </div>
     </div>

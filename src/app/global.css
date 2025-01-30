@@ -23,7 +23,7 @@
     letter-spacing: -0.01em;
   }
   section {
-    @apply py-5 my-36 lg:my-64 lg:py-10 px-3 md:px-10 xl:px-0 max-w-7xl mx-auto;
+    @apply py-5 my-36 lg:my-40 lg:py-10 px-3 md:px-10 xl:px-0 !max-w-[1440px] mx-auto;
   }
   strong,
   b {

@@ -3,41 +3,25 @@ import React from "react";
 import { projectsData } from "@/public/data/projects";
 import Link from "next/link";
 import GithubIcon from "../../components/icons/GithubIcon";
+import { TProjectsInfo } from "@/src/types/projects";
 
 interface ProjectsCardsProps {
-  selectedFilters: string[];
   handleModal: any;
+  projectData: TProjectsInfo[];
 }
 
-const ProjectsCards: React.FC<ProjectsCardsProps> = ({
-  selectedFilters,
-  handleModal,
-}) => {
-  const filteredProjects =
-    selectedFilters.length === 0
-      ? [...projectsData.projectsInfo].reverse()
-      : [...projectsData.projectsInfo].reverse().filter((project) =>
-          selectedFilters.some((f) => project.tags.includes(f))
-        );
-        
-
+const ProjectsCards = ({ handleModal, projectData }: ProjectsCardsProps) => {
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-        {filteredProjects.map((item) => (
+        {projectData?.map((item) => (
           <div
             onClick={() => handleModal(item.id)}
             key={item.id}
             className="col-span-1 card cursor-pointer rounded-lg overflow-hidden bg-white shadow-xl hover:shadow-2xl transition-all"
           >
             <div className="h-44 relative">
-              <Image
-                src={item.img}
-                alt={item.title}
-                fill
-                sizes="200"
-                className="object-cover"
-              />
+              <Image src={item.img} alt={item.title} fill sizes="200" className="object-cover" />
             </div>
             <div className="card-body p-4 pb-3 text-start">
               <h3 className="line-clamp-2 h-12 font-semibold">{item.title}</h3>
@@ -52,12 +36,7 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
                 </div>
 
                 {item.repository && (
-                  <Link
-                    href={item.repository}
-                    className="tooltip tooltip-left"
-                    data-tip="Github"
-                    target="_blank"
-                  >
+                  <Link href={item.repository} className="tooltip tooltip-left" data-tip="Github" target="_blank">
                     <GithubIcon size={20} />
                   </Link>
                 )}

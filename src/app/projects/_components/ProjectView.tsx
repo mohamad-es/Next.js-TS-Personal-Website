@@ -8,34 +8,33 @@ import Modal from "../../components/global/Modal";
 const ProjectView = () => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
-  const modalsRef: any = useRef(
-    projectsData.projectsInfo.map(() => createRef())
-  );
+  const modalsRef: any = useRef(projectsData.projectsInfo.map(() => createRef()));
   const handleModal = (index: any) => {
     modalsRef.current[index].current.showModal();
   };
-  
+
+  const filteredProjects =
+    selectedFilters.length === 0
+      ? [...projectsData.projectsInfo].reverse()
+      : [...projectsData.projectsInfo]
+          .reverse()
+          .filter((project) => selectedFilters.some((f) => project.tags.includes(f)));
+
   return (
-    <div className="max-w-7xl mt-24 mx-auto min-h-screen">
+    <section className="mt-0 mx-auto min-h-screen">
       <div className="grid grid-cols-12 gap-5 px-5 mt-16">
         <div className="col-span-12 sm:col-span-6 lg:col-span-3">
-          <ProjectsFilter
-            selectedFilters={selectedFilters}
-            setSelectedFilters={setSelectedFilters}
-          />
+          <ProjectsFilter selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
         </div>
         <div className="col-span-12 sm:col-span-6 lg:col-span-9">
-          <ProjectsCards
-            handleModal={handleModal}
-            selectedFilters={selectedFilters}
-          />
+          <ProjectsCards projectData={filteredProjects} handleModal={handleModal} />
         </div>
       </div>
 
       {projectsData.projectsInfo.map((item, index) => (
         <Modal key={index} data={item} modalRef={modalsRef.current[index]} />
       ))}
-    </div>
+    </section>
   );
 };
 

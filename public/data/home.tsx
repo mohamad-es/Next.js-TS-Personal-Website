@@ -15,15 +15,16 @@ import MinimizeIcon from "@/src/app/components/icons/MinimizeIcon";
 import MUIIcon from "@/src/app/components/icons/MUIIcon";
 import NextjsIcon from "@/src/app/components/icons/NextjsIcon";
 import ReactIcon from "@/src/app/components/icons/ReactIcon";
+import { ReactQueryIcon } from "@/src/app/components/icons/ReactQueryIcon";
 import ReduxIcon from "@/src/app/components/icons/ReduxIcon";
 import ResponsiveIcon from "@/src/app/components/icons/ResponsiveIcon";
 import SassIcon from "@/src/app/components/icons/SassIcon";
 import SearchLabtopScreenIcon from "@/src/app/components/icons/SearchLabtopScreenIcon";
 import TailwindIcon from "@/src/app/components/icons/TailwindIcon";
 import TSIcon from "@/src/app/components/icons/TSIcon";
+import ViteIcon from "@/src/app/components/icons/ViteIcon";
 import { TSeoProps } from "@/src/types/global";
 import { THomeData } from "@/src/types/home";
-
 
 export const homeSeo: TSeoProps = {
   title: "Mohammad Esmaeilpour - Front-end developer",
@@ -34,8 +35,7 @@ export const homeSeo: TSeoProps = {
 const homeHeadings = {
   h1: {
     title: "Mohammad Esmaeilpour",
-    subTitle:
-      "Building High-Performance Web Applications with Modern Technologies",
+    subTitle: "Building High-Performance Web Applications with Modern Technologies",
   },
   h2: {
     expertise: {
@@ -69,6 +69,10 @@ export const homeData: THomeData = {
   },
   skills: [
     {
+      icon: <ViteIcon size={60} />,
+      id: 14,
+    },
+    {
       icon: <JSIcon size={60} />,
       id: 1,
     },
@@ -83,6 +87,10 @@ export const homeData: THomeData = {
     {
       icon: <NextjsIcon size={60} />,
       id: 4,
+    },
+    {
+      icon: <ReactQueryIcon size={60} />,
+      id: 15,
     },
     {
       icon: <ReduxIcon size={60} />,
@@ -130,11 +138,10 @@ export const homeData: THomeData = {
         icon: <TSIcon size={20} />,
         description: (
           <>
-            TypeScript is at the heart of building reliable and maintainable web
-            applications. By enhancing JavaScript with static type definitions,
-            I ensure that the codebase is more predictable and less prone to
-            runtime errors. This approach not only speeds up the development
-            process but also results in a more stable and robust application.
+            TypeScript is at the heart of building reliable and maintainable web applications. By enhancing JavaScript
+            with static type definitions, I ensure that the codebase is more predictable and less prone to runtime
+            errors. This approach not only speeds up the development process but also results in a more stable and
+            robust application.
           </>
         ),
         keyStrengths: [
@@ -157,14 +164,12 @@ export const homeData: THomeData = {
         impact: [
           {
             title: "Fewer Bugs",
-            description:
-              "Early detection of errors leads to more reliable software.",
+            description: "Early detection of errors leads to more reliable software.",
             icon: <BugIcon size={25} />,
           },
           {
             title: "Better Collaboration",
-            description:
-              "Self-explanatory code enhances teamwork and onboarding.",
+            description: "Self-explanatory code enhances teamwork and onboarding.",
             icon: <CollabrationIcon size={25} />,
           },
         ],
@@ -177,13 +182,11 @@ export const homeData: THomeData = {
         keyStrengths: [
           {
             title: "Server-Side Rendering (SSR)",
-            description:
-              "I use SSR to ensure faster initial page loads and improved SEO.",
+            description: "I use SSR to ensure faster initial page loads and improved SEO.",
           },
           {
             title: "Static Site Generation (SSG)",
-            description:
-              "With SSG, I pre-build pages for near-instant loading, perfect for content-heavy sites.",
+            description: "With SSG, I pre-build pages for near-instant loading, perfect for content-heavy sites.",
           },
           {
             title: "Optimized Data Fetching",
@@ -194,14 +197,12 @@ export const homeData: THomeData = {
         impact: [
           {
             title: "Improved Load Times",
-            description:
-              "Faster rendering results in a better user experience.",
+            description: "Faster rendering results in a better user experience.",
             icon: <ClockIcon size={25} />,
           },
           {
             title: "Enhanced SEO",
-            description:
-              "Pre-rendered content boosts search engine visibility, driving more traffic.",
+            description: "Pre-rendered content boosts search engine visibility, driving more traffic.",
             icon: <SearchLabtopScreenIcon size={25} />,
           },
         ],
@@ -224,21 +225,18 @@ export const homeData: THomeData = {
           },
           {
             title: "Accessibility",
-            description:
-              "I prioritize creating designs that are accessible to all users, adhering to WCAG standards.",
+            description: "I prioritize creating designs that are accessible to all users, adhering to WCAG standards.",
           },
         ],
         impact: [
           {
             title: "Rapid Prototyping",
-            description:
-              "Quick iterations and design changes without sacrificing quality.",
+            description: "Quick iterations and design changes without sacrificing quality.",
             icon: <ManRunningIcon size={25} />,
           },
           {
             title: "User-Friendly Interfaces",
-            description:
-              "Consistent, accessible design enhances user engagement.",
+            description: "Consistent, accessible design enhances user engagement.",
             icon: <HandShakeIcon size={25} />,
           },
         ],
@@ -256,8 +254,7 @@ export const homeData: THomeData = {
           },
           {
             title: "Modern Layout Techniques",
-            description:
-              "Utilizing Flexbox and CSS Grid, I build layouts that are flexible and robust.",
+            description: "Utilizing Flexbox and CSS Grid, I build layouts that are flexible and robust.",
           },
           {
             title: "Media Queries",
@@ -268,14 +265,12 @@ export const homeData: THomeData = {
         impact: [
           {
             title: "Consistent Experience",
-            description:
-              "Users enjoy a seamless experience, no matter what device they use.",
+            description: "Users enjoy a seamless experience, no matter what device they use.",
             icon: <ResponsiveIcon size={25} />,
           },
           {
             title: "Higher Engagement",
-            description:
-              "A well-optimized design leads to increased user satisfaction and retention.",
+            description: "A well-optimized design leads to increased user satisfaction and retention.",
             icon: <HighVoltageIcon size={25} />,
           },
         ],
@@ -305,8 +300,7 @@ export const homeData: THomeData = {
         impact: [
           {
             title: "Long-Term Maintainability",
-            description:
-              "Clean, well-structured code is easier to maintain and extend.",
+            description: "Clean, well-structured code is easier to maintain and extend.",
             icon: <HourglassIcon size={25} />,
           },
           {
@@ -324,13 +318,11 @@ export const homeData: THomeData = {
     subTitle: homeHeadings.h2.workHighlights.subTitle,
     description: (
       <>
-        I have developed multiple applications for startups and new brands,
-        utilizing my <strong>top skills</strong> in <strong>TypeScript</strong>{" "}
-        for type safety, <strong>Next.js</strong> for websites that require good
-        page speed and performance with server-side rendering, and{" "}
-        <strong>React</strong> for most dashboard applications. Ive also used
-        various CSS libraries such as <strong>Tailwind CSS</strong>,{" "}
-        <strong>Material UI</strong>, and <strong>Ant Design</strong>.
+        I have developed multiple applications for startups and new brands, utilizing my <strong>top skills</strong> in{" "}
+        <strong>TypeScript</strong> for type safety, <strong>Next.js</strong> for websites that require good page speed
+        and performance with server-side rendering, and <strong>React</strong> for most dashboard applications. Ive also
+        used various CSS libraries such as <strong>Tailwind CSS</strong>, <strong>Material UI</strong>, and{" "}
+        <strong>Ant Design</strong>.
       </>
     ),
     callToAction: {

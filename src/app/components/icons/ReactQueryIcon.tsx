@@ -1,15 +1,9 @@
+import { IconProps } from "@/src/types/global";
 import React from "react";
-import type { SVGProps } from "react";
 
-export function LogosReactQueryIcon(props: SVGProps<SVGSVGElement>) {
+export function ReactQueryIcon({ size }: IconProps) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1.12em"
-      height="1em"
-      viewBox="0 0 256 230"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 256 230">
       <path
         fill="#00435b"
         d="m157.98 142.487l-4.91 8.527a8.29 8.29 0 0 1-7.182 4.151H108.27a8.29 8.29 0 0 1-7.182-4.151l-4.911-8.527zm13.747-23.87l-8.658 15.034h-71.98l-8.658-15.034zm-8.34-23.342l8.354 14.506H82.417l8.354-14.506zm-17.5-22.066a8.29 8.29 0 0 1 7.183 4.151l5.228 9.079H95.86l5.229-9.079a8.29 8.29 0 0 1 7.182-4.151z"
