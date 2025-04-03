@@ -48,11 +48,11 @@
   }
   /* Custom Classes */
   .text-gradient {
-    @apply font-extrabold;
+    @apply font-extrabold text-6xl;
     background: linear-gradient(180deg, #555, #000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: max(48px, min(4vw, 76px));
+    /* font-size: max(48px, min(4vw, 76px)); */
     line-height: 1;
     letter-spacing: -0.05em;
   }
@@ -60,7 +60,7 @@
     max-height: calc(100vh - 11em);
   }
   .hero-custom {
-    @apply lg:mt-44 mt-16 px-3;
+    @apply lg:mt-24 mt-16 px-3;
   }
 }
 

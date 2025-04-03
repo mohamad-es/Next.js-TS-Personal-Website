@@ -5,15 +5,8 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href={'/'} className="w-36 h-20 overflow-hidden relative -rotate-90 -translate-x-5 xl:-translate-x-10">
-      <Image
-        alt="logo"
-        src={logo}
-        className="object-cover object-left"
-        fill 
-        sizes="200"
-      />
-      ;
+    <Link href={"/"} className="w-16 h-16 overflow-hidden relative rotate-90">
+      <Image alt="logo" src={logo} className="object-cover object-left" fill sizes="80" />;
     </Link>
   );
 };

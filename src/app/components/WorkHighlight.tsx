@@ -13,10 +13,10 @@ const WorkHighlight = () => {
     modalsRef.current[index].current.showModal();
   };
 
-  const filterProject = projectsData.projectsInfo.slice(0, 3);
+  const filterProject = projectsData.projectsInfo.slice(0, 4);
 
   return (
-    <section className="overflow-hidden xl:overflow-visible" id="work-highlight">
+    <section className="overflow-hidden xl:overflow-visible px-10" id="work-highlight">
       <div className="flex flex-col xl:flex-row xl:items-end gap-2 mb-16 lg:mb-16">
         <h2>{homeData.workHighlights.title}</h2>
         <h3 className="text-gradient text-base font-medium">{homeData.workHighlights.subTitle}</h3>
